@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns="http://www.w3.org/1999/xhtml">
+    <meta charset="UTF-8">
+    <title>Car Price Predictor</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<section class="section_new">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum dolorem quod, aliquam asperiores officia minus, quam facere <br> harum adipisci dolor repellat accusantium! Architecto cupiditate eos numquam obcaecati a id veritatis nostrum reprehenderit at nobis fugit dolorem ipsam ullam quis ratione deserunt, fugiat perspiciatis deleniti qui sint rem repudiandae? Ea dicta eos sunt dolor cum aperiam est adipisci voluptate impedit rem dignissimos magnam aut at vel commodi deserunt asperiores aliquam natus distinctio necessitatibus eius, nesciunt eligendi. Provident ratione laudantium ipsam error quod architecto repudiandae, officia vero magnam, expedita quasi nobis harum accusamus enim? Quos voluptatem incidunt repudiandae pariatur aspernatur nostrum ab eligendi optio consequatur sequi molestiae eveniet cumque architecto dolore iure, ipsum suscipit exercitationem unde. Mollitia dolor explicabo culpa iure autem eos vel perferendis maxime consectetur nesciunt tempora odit architecto, aut maiores vero illum molestias quod? Voluptate incidunt quidem consequuntur tempore maiores cupiditate, sed fugiat asperiores similique debitis sunt quis excepturi eum quia nulla blanditiis dolor alias voluptatem magnam esse sequi est voluptates amet id? Dolorum, pariatur officiis placeat numquam quia corrupti nemo mollitia amet error neque, fugit vero nesciunt animi dolor saepe minus voluptate eos. Quod cum eligendi impedit autem porro facilis? Quis aspernatur praesentium quibusdam voluptatem veritatis culpa, explicabo sit consequuntur officia, ipsa ex repudiandae blanditiis fugiat alias dolore magni. Suscipit pariatur accusantium obcaecati amet cum hic aliquid fugiat doloribus iure, officia quis a eaque, vel fugit tempora, consequatur inventore voluptatem quasi. Labore minus quo nisi quae excepturi incidunt vero? Minus soluta maxime quibusdam, qui odio id inventore dicta error vitae debitis aperiam suscipit quo nulla ipsum alias provident quae voluptas? Saepe totam ullam minima, cupiditate sequi beatae molestias! Velit nulla repellat, dolorum voluptates doloremque, veritatis maxime consectetur vitae ipsum eaque recusandae nihil quisquam! Iusto libero dignissimos, vel maxime ullam omnis corporis? Veritatis ea minus voluptates ipsum, cum aspernatur, consequatur harum aperiam voluptatum tempora enim aut dignissimos laudantium neque eligendi eum quo ab sunt eius? Minus, harum id, esse consequuntur quis quam eligendi exercitationem quasi corporis voluptatum eveniet, omnis ab earum quae dolor! Assumenda necessitatibus tempore minima repellat obcaecati voluptatum ut praesentium iste laborum, recusandae nisi officia maxime nostrum reprehenderit hic facilis quos nam cupiditate? Commodi nesciunt facere quaerat, quos voluptas architecto porro obcaecati culpa velit voluptatem! Similique esse ipsum eaque maiores dolorum dolor tenetur ex. Officia excepturi quaerat beatae numquam fuga nihil iusto. Ratione, ullam nemo numquam ut recusandae qui. Voluptas corporis ad deserunt veniam reprehenderit? Quaerat enim esse illo quas explicabo corporis. Rem natus molestiae veritatis ad id laboriosam debitis nihil quod quisquam, laborum reiciendis eligendi sed assumenda atque alias, illo neque eum fuga itaque aperiam non? Corrupti, vitae. Fugiat, voluptatum, qui vitae natus nemo a ab quasi doloremque impedit, harum dicta amet similique dolore quos. Impedit, debitis hic sit porro adipisci provident nostrum incidunt, temporibus ipsa nemo suscipit numquam in, laborum vel illum cumque assumenda labore odit dicta odio culpa veniam eum modi fuga? Illo reiciendis voluptate adipisci cupiditate blanditiis tenetur earum voluptates iusto. Ipsum minima impedit exercitationem quam culpa laborum vel qui aperiam harum perferendis.</p>
+</section>
+<div class="login-form">
+         <div class="text"> Check car Price</div>
+                <form method="post" accept-charset="utf-8" name="Modelform">
+                    <div class="field">
+                        <input class="selectpicker form-control" id="company"  placeholder="Select the company" name="company" required="1">
+                        </input>
+                    </div>
+                    <div class="field" style="text-align: center">
+                        <input class="selectpicker form-control" id="car_models" placeholder="Select the model:" name="car_models" required="1"></input>
+                    </div>
+                    <div class="field" style="text-align: center">
+                        <input class="selectpicker form-control" id="year" placeholder="Select Year of Purchase:" name="year" required="1">
+                        </input>
+                    </div>
+                    <div class="field" style="text-align: center">
+                        <input class="selectpicker form-control" id="fuel_type" placeholder="Select the Fuel Type:" name="fuel_type" required="1">
+                        </input>
+                    </div>
+                    <div class="field" style="text-align: center">
+                        <input type="text" class="form-control" id="kilo_driven" placeholder="Enter the Number of Kilometres that the car has travelled:" name="kilo_driven"
+                               placeholder="Enter the kilometres driven ">
+                    </div>
+                    <div class="field" style="text-align: center">
+                        <button  class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>
+                    </div>
+                </form>
+
+    <div class="container"></div>
+        <div class="col-12" style="text-align: center">
+            <h4><span class="predection" id="prediction"></span></h4>
+        </div>
+        <div id ="javaScriptCall"></div>
+
+</div>
+</div>
+<script>
+
+
+    function form_handler(event) {
+        event.preventDefault(); // Don't submit the form normally it will block the form first to submit
+    }
+
+
+    function send_data()
+    {
+        document.querySelector('form').addEventListener("submit",form_handler);
+
+        var fd=new FormData(document.querySelector('form'));
+
+        var xhr= new XMLHttpRequest();
+
+        xhr.open('POST','/predict2',true);
+        document.getElementById('prediction').innerHTML="Wait! Predicting Price.....";
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                document.getElementById('prediction').innerHTML="Prediction: ₹"+xhr.responseText;
+            }
+        };
+        xhr.onload= function(){};
+
+        xhr.send(fd);
+    }
+</script>
+</body>
+</html>

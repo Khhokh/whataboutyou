@@ -1,0 +1,1 @@
+Set-ExecutionPolicy RemoteSigned -Scope Process // ------------------>   for the starting the virutal enviroment 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WelCome</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<div class="login-form">
+    <div class="text">
+        Check Bike Price
+    </div>
+    <form method="post" name="Modelform">
+        <div class="field">
+            <input type="number" name = "Sno" id="serial" placeholder="Email or Phone">
+        </div>
+        <div class="field">
+            <input type="text" name="Fuel_type" id="Fuel_type" placeholder="Fuel_type">
+        </div>
+        <div class="field">
+            <input type="number" name="CC" id="CC" placeholder="CC">
+        </div>
+        <div class="field">
+            <input type="number" name="Fuel_Capacity" id="Fuel_Capacity" placeholder="Fuel_Capacity">
+        </div>
+        <div class="field">
+            <input type="text" name="Bike_company_name" id="Bike_company_name" placeholder="Bike_company_name">
+        </div>
+        <button name="submit" type="submit" onclick="send_data()">Check</button>
+    </form>
+
+        
+    <div class="container">
+            <div class="col-12" style="text-align: center">
+                <h4><span class="predection" id="prediction"></span></h4>
+            </div>
+            <div id ="javaScriptCall"></div>
+
+    </div>
+</div>
+<script>
+    function form_handler(event) {
+        event.preventDefault(); // Don't submit the form normally
+    }
+    function send_data()
+    {
+        document.querySelector('form').addEventListener("submit",form_handler);
+
+        var fd=new FormData(document.querySelector('form'));
+
+        var xhr= new XMLHttpRequest();
+
+        xhr.open('POST','/predict',true);
+        document.getElementById('prediction').innerHTML="Wait! Predicting Price.....";
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                document.getElementById('prediction').innerHTML="Prediction: ₹"+xhr.responseText;
+            }
+        };
+        xhr.onload= function(){};
+
+        xhr.send(fd);
+    }
+</script>
+</body>
+</html>

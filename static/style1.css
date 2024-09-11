@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.9;
+    background-color: #000000;
+}
+
+.header {
+    padding: 0 3rem;
+    height: 103vh;
+    /* display: flex; */
+    /* flex-direction: column; */
+    border-top: 1px solid #ddd;
+    align-items: center;
+    border-color: rgb(255, 255, 255);
+  }
+:root {
+    --color-primary: #5ec576;
+    --color-secondary: #ffcb03;
+    --color-tertiary: #ff585f;
+    --color-primary-darker: #4bbb7d;
+    --color-secondary-darker: #ffbb00;
+    --color-tertiary-darker: #fd424b;
+    --color-primary-opacity: #5ec5763a;
+    --color-secondary-opacity: #ffcd0331;
+    --color-tertiary-opacity: #ff58602d;
+    --gradient-primary: linear-gradient(to top left, #fefefe, #4b4c42);
+    --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  }
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+.aone{
+    color:#2a2828;
+    font-size:20px;
+    text-decoration:none;
+    /* margin-right: 13px; */
+    /* padding: 13px; */
+    background-color: #ffffff;
+    border-radius: 11px;
+
+}
+.a2{
+    margin-left: 49%;
+    margin-right: 82px;
+}
+
+.a3{
+    margin-right: 69px;
+}
+
+
+
+
+
+
+/*
+.nav{
+    text-align: center;
+    rgba(255, 255, 255, 0.95);
+    padding: 21px;
+    background-color: #fff;
+} */
+
+.nav.sticky{
+    position: fixed;
+    text-align: center;
+    rgba(255, 255, 255, 0.95);
+    padding: 21px;
+    background-color: #000000;
+}
+.nav {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    height: 9rem;
+    width: 100%;
+    /* padding: 0 6rem;
+     */
+     padding: 45px;
+    z-index: 100;
+    color: white;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  .nav__item {
+    margin-left: 4rem;
+  }
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  .nav__link--btn:link,
+  .nav__link--btn:visited {
+    padding: 0.8rem 2.5rem;
+    border-radius: 3rem;
+    background-color: var(--color-primary);
+    color: #222;
+  }
+
+  .nav__link--btn:hover,
+  .nav__link--btn:active {
+    color: inherit;
+    background-color: var(--color-primary-darker);
+    color: #333;
+  }
+.hello{
+    margin-right: 684px;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+
+.heading-main{
+    /* display: flex; */
+    line-height: 80px;
+    font-size: 34px;
+    margin-left: 154px;
+    margin-top: 45px;
+
+}
+.head1{
+    font-size: 80px;
+    color: white;
+
+}
+.head2{
+    font-size: 80px;
+    background: linear-gradient(to right, #2efff5, #d179cc, #e64bc7, #f3f3f3);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+.head3{
+    font-size: 105px;
+    background:linear-gradient(to right, #0fddff, #C8A1E0, #C798BB, #FFF);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.heading-second{
+    text-align: center;
+    font-size: 22px;
+    height: 300px;
+    width: 350px;
+}
+h1{
+    color: #978a8a;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.first-ml-image{
+    height: 300px;
+    width: 350px;
+}
+
+h4{
+    text-transform: uppercase;
+    font-size: 19px;
+    align-items: center;
+    /* line-height: 1.4px; */
+    font-family: 'Times New Roman', Times, serif;
+}
+.span1{
+    line-height: 4px;
+}
+.heading-main-two{
+    text-align: center;
+}
+.paragraph-one{
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 18px;
+    color: white;
+}
+.first-grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin-top: 30px;
+}
+.button-one{
+    margin-top: 34px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-right: 12px;
+    background: linear-gradient(to right, #000, #1d1c1d, #5e5d5d);
+color: #00c4e4;
+}
+
+
+ .btn{
+    margin-top: 12px;
+    font-size: 20px;
+ }
+
+
+
+
+.first-image{
+    position: absolute;
+    z-index: -1;
+    width: 600px;
+    right: 103px;
+    top: 307px;
+}
+.second-image{
+    width: 493px;
+    height: 554px;
+    opacity: 10;
+    position: absolute;
+    right: 30px;
+margin-right: 126px;
+}
+
+
+
+
+
+/*
+.highlight {
+  position: relative;
+} */
+
+/* .highlight::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: var(--gradient-primary);
+} */
+
+
+
+.header{
+    height: 103vh;
+    /* background-image:  linear-gradient(to right,#ad0d9d96,#bbacb977), url(./photos/beautiful-scenery-summit-mount-everest-covered-with-snow-white-clouds.jpg); */
+   background-size: cover;
+   background-position: top;
+   /* clip-path: polygon(0 0 ,100% 0,100% 85%,0 100%); */
+}
+
+.for{
+padding: 34px;
+border-top: 1px solid #ddd;
+margin-bottom: 34px;
+}
+
+
+
+
+
+.about{
+    font-family: Roboto;
+    font-size: 68px;
+    color:white;
+    text-align: center;
+}
+.about1{
+    text-align: center;
+}
+.cen{
+    text-align: center;
+    margin-top: 29px;
+
+}
+
+
+.pra1{
+    font-size: 30px;
+}
+.s1{
+    font-size: 19px;
+    margin-left: -6px;;
+}
+.s2{
+    margin-left: 3px;
+}
+.s3{
+    margin-left: -6px;
+}
+.s4{
+    margin-left: -7px;
+}
+.s5{
+    margin-left: -2px;
+}
+.s6{
+    margin-left: 4px;
+}
+.s7{
+    margin-left: 3px;
+}
+.s8{
+    margin-left: 0px;
+}
+.s9{
+    margin-left: 12px;
+}
+.s10{
+    margin-left: -2px;
+}
+.s11{
+    margin-left: 21px;
+}
+.s12{
+    margin-left: 14px;
+}
+.s13{
+    margin-left: 15px;
+}
+.s14{
+    margin-left: 22px;
+}
+
+.on{
+    font-size: 17px;
+    color: white;
+    font-family: Roboto;
+    line-height: 34px;
+}
+.new-line{
+    font-size: 15px;
+}
+
+/* .one-more{
+    height: 95vh;
+    background-image: linear-gradient(#007bff 83%, #0c8eff 88%);
+    display: block;
+} */
+
+
+
+.section{
+    background: linear-gradient(to right, #000, #1d1c1d, #5e5d5d);
+    transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+
+.section-section{
+    height: 100vh;
+    background: linear-gradient(to right, #000, #1d1c1d, #5e5d5d);
+    transition: transform 1s, opacity 1s;
+}
+.newsec{
+   display: grid;
+   justify-content: center;
+}
+.sp{
+    color: #ffffff;
+    font-size: 56px;
+    font-family: Roboto;
+    text-align: center;
+    margin-top: 34px;
+    margin-bottom: 45px;
+}
+.photosection{
+    display: grid;
+    grid-template-columns: 295px 295px 295px 295px;
+    grid-template-rows: 451px; /* Adjusts row height based on content */
+    gap: 20px;
+    text-align: center;
+    /* border-block: solid;
+border-color: white; */
+}
+.per1{
+ background:  linear-gradient(to right, #000000, #181818, #2d2d2d)
+}
+.per2{
+    background:linear-gradient(to right, #171717, #292828, #3d3d3d);
+}
+.per3{
+    background: linear-gradient(to right, #3d3d3d, #5b5959, #878787);
+}
+.per4{
+   background: linear-gradient(to right, #7b7979, #9c9595, #ababab);
+}
+.p1{
+    width: 206px;
+    height: 201px;
+}
+
+
+
+/* ////////////////////////////////// BUTTON  ///////////////////////////////*/
+.model{
+    font-size: 45px;
+    align-items: center;
+    text-align: center;
+
+}
+.model_button{
+    text-decoration: none;
+    font-size: 23px;
+    border-radius: 8px;
+    padding: 11px;
+    color: white;
+    background: linear-gradient(to right,#030202, #363436, #848181);
+}
