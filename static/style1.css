@@ -83,7 +83,7 @@ html {
     display: flex;
     flex:1;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 9rem;
     width: 100%;
